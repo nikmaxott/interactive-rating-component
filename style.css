@@ -44,6 +44,21 @@ p {
     text-align: center;
 }
 
+.circle:hover {
+    background-color: var(--orange);
+    color: var(--white);   
+}
+
+.select {
+    background-color: var(--light-grey);
+    color: var(--white);
+    border-radius: 50%;
+    display:inline-block;
+    width: 1em;
+    height: 1em;
+    padding: 1em;
+    text-align: center;
+}
 
 .ratings {
     display: flex;
@@ -57,6 +72,11 @@ p {
     border-radius: 25px;
     padding: 0.75em;
     letter-spacing: 0.15em;
+}
+
+.submit:hover {
+    background-color: var(--white);
+    color: var(--orange);
 }
 
 /* THANKS */

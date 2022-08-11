@@ -46,11 +46,11 @@
     to help us improve our offering!</p>
       
     <div class="ratings">
-      <p onclick="setRating(1)"class="circle">1</p>
-      <p onclick="setRating(2)" class="circle">2</p>
-      <p onclick="setRating(3)" class="circle">3</p>
-      <p onclick="setRating(4)" class="circle">4</p>
-      <p onclick="setRating(5)" class="circle">5</p>
+      <p onclick="setRating(1)" id="1" class="circle">1</p>
+      <p onclick="setRating(2)" id="2" class="circle">2</p>
+      <p onclick="setRating(3)" id="3" class="circle">3</p>
+      <p onclick="setRating(4)" id="4" class="circle">4</p>
+      <p onclick="setRating(5)" id="5" class="select">5</p>
     </div>
     <p class="submit" onclick="submit()">SUBMIT</p>\
   </div>`;
@@ -65,7 +65,16 @@
 
   function setRating(score) {
     rating = score;
-    console.log(rating)
+
+    for (i = 1; i !== 6; i++) {
+
+      if (i !== score) {
+        console.log(i);
+        document.getElementById(i).className = "circle"
+      } else {
+        document.getElementById(i).className = "select"
+      }
+    }
   }
   init()
 </script>
